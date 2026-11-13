@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/opt/anaconda1anaconda2anaconda3/bin/python
 #
 # Wrapper script for Java Conda packages that ensures that the java runtime
 # is invoked with the right options. Adapted from the bash script (http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in/246128#246128).
@@ -83,7 +83,7 @@ def main():
     jar_path = os.path.join(jar_dir, jar_file)
 
     if not os.path.isfile(jar_path):
-        sys.stderr.write('GATK jar file not found. Have you run \"gatk-register\"?\n')
+        sys.stderr.write('GATK jar file not found. Have you run \"gatk3-register\"?\n')
         sys.exit(1)
 
     java_args = [java] + mem_opts + prop_opts + [jar_arg] + [jar_path] + pass_args
